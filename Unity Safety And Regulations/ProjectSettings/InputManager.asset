@@ -297,8 +297,8 @@ InputManager:
     m_Name: Lift
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: w
+    negativeButton: left ctrl
+    positiveButton: left shift
     altNegativeButton: 
     altPositiveButton: joystick button 1
     gravity: 1000
