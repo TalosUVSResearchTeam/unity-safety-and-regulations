@@ -15,7 +15,7 @@ public class MeterCounterScript : MonoBehaviour
     void Update()
     {
        //change the text 
-       height = drone.transform.position.y-0.19f;
+       height = drone.transform.position.y;
        meterText.SetText(height.ToString("F2") + " meters");
     }
 }
