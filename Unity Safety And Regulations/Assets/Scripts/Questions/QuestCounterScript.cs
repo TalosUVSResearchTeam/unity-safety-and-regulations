@@ -9,12 +9,12 @@ public class QuestCounterScript : MonoBehaviour
     public TMP_Text  questText;
 
     //questions answered
-    public int numAns;
+    public int numAns=0;
 
     //questions total
     float totalQuest = 10;
 
-    void ChangeText() {
+    public void ChangeText() {
        numAns++;
        questText.SetText(numAns + "/" + totalQuest + " questions");
     }

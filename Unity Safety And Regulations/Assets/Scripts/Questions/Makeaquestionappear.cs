@@ -7,9 +7,10 @@ public class Makeaquestionappear : MonoBehaviour
 {
     
     //canvas with questions
-    public GameObject questionCanvas;
+    public GameObject questionCanvas, questionCountCanvas, circle1, circle2;
     public bool check1, check2, check3;
     public bool btnPress1, btnPress2, btnPress3;
+
 
     void Start(){
         questionCanvas.SetActive(false);
@@ -36,8 +37,11 @@ public class Makeaquestionappear : MonoBehaviour
     }
     public void CheckAns(){
         if(check1 && btnPress1){
+            questionCountCanvas.GetComponent<QuestCounterScript>().ChangeText();
             Time.timeScale = 1;
             questionCanvas.SetActive(false);
+            Destroy(circle1);
+            Destroy(circle2);
         }else{
 
         }
