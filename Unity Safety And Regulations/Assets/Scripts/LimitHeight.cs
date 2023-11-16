@@ -14,7 +14,7 @@ public class LimitHeight : MonoBehaviour
 
     void Update()
     {
-    if(trigger.transform.position.y > 116.62)
+    if(trigger.transform.position.y > 113.62)
         {
             text.SetActive(true);
         }
