@@ -8,14 +8,17 @@ public class Makeaquestionappear : MonoBehaviour
 {
     
     //canvas with questions
-    public GameObject questionCanvas, questionCountCanvas, circle1, circle2;
+    public GameObject questionCanvas, questionCountCanvas, circle1, circle2,code;
     public bool check1, check2, check3;
     public bool btnPress1, btnPress2, btnPress3;
     public GameObject btnPress1GO, btnPress2GO, btnPress3GO;
-
+    
+    public int kar;
 
     void Start(){
+       
         questionCanvas.SetActive(false);
+      
     }
     public void ClickedBtn(){
         Time.timeScale = 1;
@@ -46,9 +49,14 @@ public class Makeaquestionappear : MonoBehaviour
             Destroy(circle2);
         }else if(check1 && btnPress2){
             btnPress2GO.GetComponent<Image>().color = Color.red;
-        }else if(check1 && btnPress3){
+            code.GetComponent<kardouleskatikati>().kardoulesoof();
+        }
+        else if(check1 && btnPress3){
             btnPress3GO.GetComponent<Image>().color = Color.red;
-        }else if(check2 && btnPress2){
+            
+            code.GetComponent<kardouleskatikati>().kardoulesoof();
+        }
+        else if(check2 && btnPress2){
             questionCountCanvas.GetComponent<QuestCounterScript>().ChangeText();
             Time.timeScale = 1;
             questionCanvas.SetActive(false);
@@ -56,9 +64,15 @@ public class Makeaquestionappear : MonoBehaviour
             Destroy(circle2);
         }else if(check2 && btnPress1){
             btnPress1GO.GetComponent<Image>().color = Color.red;
-        }else if(check2 && btnPress3){
+
+            code.GetComponent<kardouleskatikati>().kardoulesoof();
+        }
+        else if(check2 && btnPress3){
             btnPress3GO.GetComponent<Image>().color = Color.red;
-        }if(check3 && btnPress3){
+           
+            code.GetComponent<kardouleskatikati>().kardoulesoof();
+        }
+        if(check3 && btnPress3){
             questionCountCanvas.GetComponent<QuestCounterScript>().ChangeText();
             Time.timeScale = 1;
             questionCanvas.SetActive(false);
@@ -66,8 +80,15 @@ public class Makeaquestionappear : MonoBehaviour
             Destroy(circle2);
         }else if(check3 && btnPress2){
             btnPress2GO.GetComponent<Image>().color = Color.red;
-        }else if(check3 && btnPress1){
+           
+            code.GetComponent<kardouleskatikati>().kardoulesoof();
+        }
+        else if(check3 && btnPress1){
             btnPress3GO.GetComponent<Image>().color = Color.red;
+           
+      code.GetComponent<kardouleskatikati>().kardoulesoof();
         }
     }
+    
+    
 }
