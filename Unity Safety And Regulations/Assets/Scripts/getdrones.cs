@@ -9,6 +9,7 @@ public class getdrones : MonoBehaviour
     public GameObject drone1, drone2, drone3, drone4;
     public GameObject cameraDrone1, cameraDrone2, cameraDrone3, cameraDrone4;
     public GameObject cm1, cm2, cm3, cm4;
+    public GameObject meterCount1, meterCount2, meterCount3, meterCount4;
     // Use this for initialization
     void Start()
     {
@@ -24,6 +25,11 @@ public class getdrones : MonoBehaviour
             cm2.SetActive(false);
             cm3.SetActive(false);
             cm4.SetActive(false);
+
+            meterCount1.SetActive(true);
+            meterCount2.SetActive(false);
+            meterCount3.SetActive(false);
+            meterCount4.SetActive(false);
 
             cameraDrone1.SetActive(true);
             cameraDrone2.SetActive(false);
@@ -42,6 +48,11 @@ public class getdrones : MonoBehaviour
             cm3.SetActive(false);
             cm4.SetActive(false);
 
+            meterCount1.SetActive(false);
+            meterCount2.SetActive(true);
+            meterCount3.SetActive(false);
+            meterCount4.SetActive(false);
+
             cameraDrone1.SetActive(false);
             cameraDrone2.SetActive(true);
             cameraDrone3.SetActive(false);
@@ -58,6 +69,11 @@ public class getdrones : MonoBehaviour
             cm3.SetActive(true);
             cm4.SetActive(false);
 
+            meterCount1.SetActive(false);
+            meterCount2.SetActive(false);
+            meterCount3.SetActive(true);
+            meterCount4.SetActive(false);
+
             cameraDrone1.SetActive(false);
             cameraDrone2.SetActive(false);
             cameraDrone3.SetActive(true);
@@ -73,6 +89,11 @@ public class getdrones : MonoBehaviour
             cm2.SetActive(false);
             cm3.SetActive(false);
             cm4.SetActive(true);
+
+            meterCount1.SetActive(false);
+            meterCount2.SetActive(false);
+            meterCount3.SetActive(false);
+            meterCount4.SetActive(true);
 
             cameraDrone1.SetActive(false);
             cameraDrone2.SetActive(false);
