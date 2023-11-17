@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShowMap : MonoBehaviour
 {
     public GameObject MapCanvas;
-    bool CanvasIsOn = true;
+    bool CanvasIsOn = false;
     void Start() {
         MapCanvas.SetActive(false);
     }
