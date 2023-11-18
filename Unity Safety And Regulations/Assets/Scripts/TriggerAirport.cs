@@ -18,7 +18,7 @@ public class TriggerAirport : MonoBehaviour
     }
     public IEnumerator KillDrone(float t)
     {   if(check){
-            while(code.GetComponent<kardouleskatikati>().kar>0){
+            while(code.GetComponent<kardouleskatikati>().kar>-1){
                 yield return new WaitForSeconds(t);
                 Debug.Log("kkkkkkk");
                 if(check)
