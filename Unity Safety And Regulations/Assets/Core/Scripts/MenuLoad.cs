@@ -9,5 +9,6 @@ public class MenuLoad : MonoBehaviour
     {
         SceneManager.LoadScene("Main Menu Scene");
         Time.timeScale=1;
+        PlayerPrefs.SetInt("index", 0);
     }
 }
