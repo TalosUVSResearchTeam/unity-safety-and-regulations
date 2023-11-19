@@ -15,7 +15,7 @@ public class EnableSettingsMenu : MonoBehaviour
     void Update()
     {
         if(x!=0){
-            x-=Time.deltaTime;
+            x-=Time.fixedDeltaTime;
             if (x<=0){
             
                 obj.SetActive(true);
