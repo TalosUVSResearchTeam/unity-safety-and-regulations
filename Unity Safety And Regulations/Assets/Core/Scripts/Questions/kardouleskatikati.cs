@@ -28,9 +28,10 @@ public class kardouleskatikati : MonoBehaviour
         {
             kardoules1.SetActive(false);
         }
+        if(kar == 0) LoadScene();
     }
-void Update()
-    {
-        
+    public void LoadScene()    {
+        SceneManager.LoadScene("Lose Scene");
+        Time.timeScale=1;
     }
 }

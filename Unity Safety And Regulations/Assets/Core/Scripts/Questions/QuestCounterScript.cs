@@ -17,5 +17,10 @@ public class QuestCounterScript : MonoBehaviour
     public void ChangeText() {
        numAns++;
        questText.SetText(numAns + "/" + totalQuest + " questions");
+       if(numAns==10) LoadScene();
+    }
+    public void LoadScene()    {
+        SceneManager.LoadScene("Win Scene");
+        Time.timeScale=1;
     }
 }
