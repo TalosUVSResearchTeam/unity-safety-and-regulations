@@ -15,9 +15,9 @@ public class heightcorrection : MonoBehaviour
 
     void Update()
     {
-        if (trigger.transform.position.y > 120.62)
+        if (trigger.transform.position.y > 120)
         {
-           trigger.transform.Translate(Vector3.down * 2 * Time.fixedDeltaTime );
+           trigger.transform.Translate(Vector3.down * 8 * Time.fixedDeltaTime );
         }
        
     }
