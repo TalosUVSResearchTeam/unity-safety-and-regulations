@@ -80,13 +80,11 @@ public class Makeaquestionappear : MonoBehaviour
             Destroy(circle2);
         }else if(check3 && btnPress2){
             btnPress2GO.GetComponent<Image>().color = Color.red;
-           
             code.GetComponent<kardouleskatikati>().kardoulesoof();
         }
         else if(check3 && btnPress1){
-            btnPress3GO.GetComponent<Image>().color = Color.red;
-           
-      code.GetComponent<kardouleskatikati>().kardoulesoof();
+            btnPress1GO.GetComponent<Image>().color = Color.red;
+            code.GetComponent<kardouleskatikati>().kardoulesoof();
         }
     }
     
