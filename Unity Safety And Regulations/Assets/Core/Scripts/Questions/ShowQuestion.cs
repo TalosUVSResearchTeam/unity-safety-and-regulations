@@ -10,10 +10,30 @@ public class ShowQuestion : MonoBehaviour
     void Start()
     {
         number = PlayerPrefs.GetInt("index");
-        if(number==0) q0.SetActive(true);
-        else if(number==1) q1.SetActive(true);
-        else if(number==2) q2.SetActive(true);
-        else if(number==3) q3.SetActive(true);
+        if(number==0){ 
+            q0.SetActive(true);
+            q1.SetActive(false);
+            q2.SetActive(false);
+            q3.SetActive(false);
+        }
+        else if(number==1){ 
+            q0.SetActive(false);
+            q1.SetActive(true);
+            q2.SetActive(false);
+            q3.SetActive(false);
+        }
+        else if(number==2){ 
+            q0.SetActive(false);
+            q1.SetActive(false);
+            q2.SetActive(true);
+            q3.SetActive(false);
+        }
+        else if(number==3){ 
+            q0.SetActive(false);
+            q1.SetActive(false);
+            q2.SetActive(false);
+            q3.SetActive(true);
+        }
     }
 
     // Update is called once per frame

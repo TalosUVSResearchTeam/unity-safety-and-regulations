@@ -14,7 +14,9 @@ public class Makeaquestionappear : MonoBehaviour
     public GameObject btnPress1GO, btnPress2GO, btnPress3GO;
     
     public int kar;
-
+    public bool isMatch = false;
+    public TMP_InputField  mainInputField1, mainInputField2, mainInputField3;
+    public string ansMatch1, ansMatch2, ansMatch3;
     void Start(){
        
         questionCanvas.SetActive(false);
@@ -88,5 +90,38 @@ public class Makeaquestionappear : MonoBehaviour
         }
     }
     
-    
+    public void CheckMatch(){
+        int checkMatch = 0;
+        if(mainInputField1.text==ansMatch1){
+            checkMatch++;
+            mainInputField1.GetComponent<Image>().color = Color.green;
+        }else{
+            checkMatch=0;
+            mainInputField1.GetComponent<Image>().color = Color.red;
+            code.GetComponent<kardouleskatikati>().kardoulesoof();
+        }
+        if(mainInputField2.text==ansMatch2){
+            checkMatch++;
+            mainInputField2.GetComponent<Image>().color = Color.green;
+        }else{
+            checkMatch=0;
+            mainInputField2.GetComponent<Image>().color = Color.red;
+            code.GetComponent<kardouleskatikati>().kardoulesoof();
+        }
+        if(mainInputField3.text==ansMatch3){
+            checkMatch++;
+            mainInputField3.GetComponent<Image>().color = Color.green;
+        }else{
+            checkMatch=0;
+            mainInputField3.GetComponent<Image>().color = Color.red;
+            code.GetComponent<kardouleskatikati>().kardoulesoof();
+        }
+        if(checkMatch==3){
+            questionCountCanvas.GetComponent<QuestCounterScript>().ChangeText();
+            Time.timeScale = 1;
+            questionCanvas.SetActive(false);
+            Destroy(circle1);
+            Destroy(circle2);
+        }
+    }
 }
